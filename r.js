@@ -362,7 +362,7 @@ $(function(){
   $testStr.change(function(){$test.click();});
   
   //自动化测试初始化;
-  1 && (function(){
+  0 && (function(){
     $i1.val('z00350');
     $i2.val('z02605');
     $testStr.val('z00351');
@@ -371,4 +371,3 @@ $(function(){
   })();
 })
 
-var b=/Z(0([4-9]\d{2}|3([6-9]\d{1}|5([1-9]|0)))|[01]\d{3}|2(6(0([5]|[0-4]))|[0-5]\d{2}))/;
