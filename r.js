@@ -367,7 +367,7 @@ $(function(){
   $testStr.change(function(){$test.click();});
   
   //自动化测试初始化;
-  1 && (function(){
+  0 && (function(){
     $i1.val('z00123');
     $i2.val('z01456');
     $testStr.val('z00351');
