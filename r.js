@@ -82,7 +82,7 @@ var gtThanNumPtn=function(num, allowEq){
     _t.push(parseInt(numArr[k]));
   }
   numArr=_t;
-  var first=numArr[0];
+  var first=parseInt(numArr[0]);
   
   var branch=[];
 
@@ -131,7 +131,7 @@ var ltThanNumPtn=function(num, allowEq){
     _t.push(parseInt(numArr[k]));
   }
   numArr=_t;
-  var first=numArr[0];
+  var first=parseInt(numArr[0]);
   
   if(numArr.length===0){
     return '';
