@@ -112,7 +112,9 @@ var gtThanNumPtn=function(num, allowEq){
     }
   }
   
-  return S.or.apply(null, branch);
+  var r=S.or.apply(null, branch);
+  G.a(S.format(r));
+  return r;
   /*
   if(branch.length==0){
     //如first是9,且numArr.length==0, 且allowEq==false, 则可能永不匹配.
@@ -277,10 +279,13 @@ var regRange=function(start, end, startEq, endEq){
     }else if(first2-first1==2){
       var s='['+(first1+1)+']';
     }
-    if(_a1.length>1){
-      s+='\\d{'+(_a1.length-1)+'}';
+
+    if(first2-first1>=2){
+      if(_a1.length>1){
+        s+='\\d{'+(_a1.length-1)+'}';
+      }
+      branch.push(s);
     }
-    branch.push(s);
   }
 
   //和最大分支相同first值分支
@@ -362,9 +367,9 @@ $(function(){
   $testStr.change(function(){$test.click();});
   
   //自动化测试初始化;
-  0 && (function(){
-    $i1.val('z00350');
-    $i2.val('z02605');
+  1 && (function(){
+    $i1.val('z00123');
+    $i2.val('z01456');
     $testStr.val('z00351');
     $cal.click();
     $test.click();
